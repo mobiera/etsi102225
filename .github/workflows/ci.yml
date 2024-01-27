@@ -1,3 +1,5 @@
+## A basic GitHub Actions workflow for your Quarkus application.
+
 name: CI
 
 on:
@@ -32,8 +34,6 @@ jobs:
         run: |
           echo ${MVN_SETTINGS} > /tmp/settings.xml
           echo -n "$GPG_KEY" | base64 --decode | gpg --import
-          pushd etsi102225-api && mvn deploy -s /tmp/settings.xml && popd
-          pushd etsi102225-crypto && mvn deploy -s /tmp/settings.xml && popd
-          pushd etsi102225-impl && mvn deploy -s /tmp/settings.xml && popd
+          mvn deploy -s /tmp/settings.xml
           rm -f /tmp/settings.xml
           rm -rf /home/runner/.gpg

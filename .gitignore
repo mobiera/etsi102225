@@ -1,8 +1,45 @@
-etsi102225-impl/target/
-etsi102225-crypto/target/
-etsi102225-api/target/
 /target/
-/.vscode/
-/.project
-/.classpath
-/.settings/
+bin/
+
+#Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+.flattened-pom.xml
+
+# Eclipse
+.project
+.classpath
+.settings/
+/bin/
+/lib/
+
+# IntelliJ
+.idea
+*.ipr
+*.iml
+*.iws
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode
+.factorypath
+
+# OSX
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env
+/test
